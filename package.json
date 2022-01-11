@@ -4,7 +4,7 @@
   "description": "qystudio cdn",
   "main": "package.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo test"
   },
   "author": "ljs0712",
   "license": "MIT",
