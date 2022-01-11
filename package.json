@@ -1,12 +1,19 @@
 {
   "name": "qycdn",
   "version": "0.9.0",
-  "description": "qystudio cdn",
+  "description": "qycdn",
   "main": "package.json",
   "scripts": {
     "test": "echo test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qystudio0/cdn.git"
+  },
   "author": "ljs0712",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qystudio0/cdn/issues"
+  },
   "homepage": "https://qystudio.ltd"
 }
