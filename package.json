@@ -3,5 +3,10 @@
   "version": "0.9.0",
   "description": "qystudio cdn",
   "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ljs0712",
+  "license": "MIT",
   "homepage": "https://qystudio.ltd"
 }
