@@ -26,7 +26,7 @@ function friend_api() {
                 ajax = new ActiveXObject("Microsoft.XMLHTTP");
             } catch (e) {
                 VolantisApp.message('异常', '糟糕,你的浏览器不能上传文件!', {
-                    icon: 'fa-light fa-circle-exclamation light-red',
+                    icon: 'fa-light fa-circle-exclamation red',
                     transitionIn:'bounceInDown',
                     transitionOut: 'fadeOutDown',
                     time: 5000
@@ -50,8 +50,8 @@ function friend_api() {
                        time: 5000
                     });
                 } else {
-                    VolantisApp.message('异常', '友链申请失败 提示："+res["msg"]', {
-                        icon: 'fa-light fa-circle-exclamation light-red', 
+                    VolantisApp.message('异常', '友链申请失败 提示:'+res["msg"], {
+                        icon: 'fa-light fa-circle-exclamation red', 
                         transitionIn:'bounceInDown',
                         transitionOut: 'fadeOutDown',
                         time: 5000
@@ -59,7 +59,7 @@ function friend_api() {
                 }
             } else {
                 VolantisApp.message('异常', '网络异常！', {
-                   icon: 'fa-light fa-circle-exclamation light-red', 
+                   icon: 'fa-light fa-circle-exclamation red', 
                    transitionIn:'bounceInDown',
                    transitionOut: 'fadeOutDown',
                    time: 5000
