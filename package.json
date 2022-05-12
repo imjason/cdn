@@ -1,6 +1,6 @@
 {
   "name": "qycdn",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "qycdn",
   "main": "package.json",
   "scripts": {
