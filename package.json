@@ -1,6 +1,6 @@
 {
   "name": "qycdn",
-  "version": "0.9.11",
+  "version": "0.9.12",
   "description": "qycdn",
   "main": "package.json",
   "scripts": {
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/qystudio0/cdn/issues"
   },
-  "homepage": "https://qystudio.ltd"
+  "homepage": "https://qystu.cc"
 }
