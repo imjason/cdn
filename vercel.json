@@ -17,5 +17,5 @@
       "source": "/cdnjs/:match*",
       "destination": "https://cdn.staticfile.org/:match*"
     }
-  }
+  ]
 }
