@@ -46,49 +46,52 @@ function askFriend (event) {
         });
         return;
     }
+    VolantisApp.message('资料填写完成', '准备提交请等待', {
+        icon: 'fa-light fa-check light-blue', 
+        transitionIn:'bounceInDown',
+        transitionOut: 'fadeOutDown',
+        time: 5000
+    });
     event.target.classList.add('is-loading');
     grecaptcha.ready(function() {
-          grecaptcha.execute('6LdU3-UgAAAAALLKV6IltrhA2KJcjoopc4XhhxNM', {action: 'submit'}).then(function(token) {
-              $.ajax({
-                type: 'get',
-                cache: false,
-                url: uri,
-                dataType: "jsonp",
-                async: false,
-                processData: false,
-                //timeout:10000, 
-                complete: function (data) {
-                    if(data.status==200){
-                    $.ajax({
-                        type: 'POST',
-                        dataType: "json",
-                        data: {
-                            "name": name,
-                            "url": uri,
-                            "image": image,
-                            "description": des,
-                            "verify": token,
-                        },
-                        success: function (data) {
-                            VolantisApp.message('恭喜', '提交成功，请等待博主审核！我们不再提醒你结果，谢谢！', {
+        grecaptcha.execute('6LdzNvQhAAAAABzqu6957x_uDUUrnh09taiocJbx', {action: 'submit'}).then(function(token) {
+            var body='name='+encodeURIComponent(name)+'&url='+encodeURIComponent(url)+'&image='+encodeURIComponent(image)+'&description='+encodeURIComponent(des)+'&verify='+encodeURIComponent(token)
+            console.log(body);
+            fetch(uri, {
+                method: 'post',
+                body: body,
+                headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+            }).then(function(data){
+                if (data.ok){
+                    data.json().then(function(res){
+                         if (res["status"]) {
+                             VolantisApp.message('恭喜', '提交成功，请等待博主审核！我们不再提醒你结果，谢谢！', {
                                 icon: 'fa-light fa-check light-blue', 
                                 transitionIn:'bounceInDown',
                                 transitionOut: 'fadeOutDown',
                                 time: 5000
                              });
-                        }
-                    });}
-                    else{
-                        VolantisApp.message('异常', 'URL无法连通!', {
-                            icon: 'fa-light fa-circle-exclamation red',
-                            transitionIn:'bounceInDown',
-                            transitionOut: 'fadeOutDown',
-                            time: 5000
-                        });
-                    }
-                    event.target.classList.remove('is-loading');
-                }
-          });
+                         } else {
+                             VolantisApp.message('异常', '友链申请失败 提示:'+res["msg"], {
+                                icon: 'fa-light fa-circle-exclamation red', 
+                                transitionIn:'bounceInDown',
+                                transitionOut: 'fadeOutDown',
+                                time: 5000
+                             });
+                         }
+                     });
+                } else {
+                    VolantisApp.message('异常', 'URL无法连通!', {
+                        icon: 'fa-light fa-circle-exclamation red',
+                        transitionIn:'bounceInDown',
+                        transitionOut: 'fadeOutDown',
+                        time: 5000
+                     });
+                 }
+            });
+            event.target.classList.remove('is-loading');
         });
     });
 }
