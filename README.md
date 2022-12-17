@@ -8,7 +8,7 @@ include img js fonts
 + http://unpkg.zhimg.com/qycdn@lasted
 + https://cdn.qystu.cc
 ### 0.9.12支持
-* gh: https://cdn.qystu.cc/gh
-* npm: https://cdn.qystu.cc/npm
-* combine: https://cdn.qystu.cc/combine
-* cdnjs: https://cdn.qystu.cc/cdnjs
+* gh: https://cdn.chuqis.com/gh
+* npm: https://cdn.chuqis.com/npm
+* combine: https://cdn.chuqis.com/combine
+* cdnjs: https://cdn.chuqis.com/cdnjs
