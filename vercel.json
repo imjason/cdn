@@ -2,20 +2,20 @@
   "rewrites": [
     {
       "source": "/gh/:match*",
-      "destination": "https://cdn1.tianli0.top/gh/:match*"
+      "destination": "https://cdn.jsdelivr.net/gh/:match*"
     },
     {
 
       "source": "/combine/:match*",
-      "destination": "https://cdn1.tianli0.top/combine/:match*"
+      "destination": "https://cdn.jsdelivr.net/combine/:match*"
     },
     {
       "source": "/npm/:match*",
-      "destination": "https://npm.elemecdn.com/:match*"
+      "destination": "https://unpkg.com/:match*"
     },
     {
       "source": "/cdnjs/:match*",
-      "destination": "https://cdn.staticfile.org/:match*"
+      "destination": "https://cdnjs.cloudflare.com/ajax/libs/:match*"
     }
   ]
 }
