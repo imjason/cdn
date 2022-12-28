@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/"
-  to = "https://cdn.jsdelivr.net"
+  from = "/*"
+  to = "https://cdn.jsdelivr.net/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
