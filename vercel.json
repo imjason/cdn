@@ -1,21 +1,6 @@
 {
-  "redirects": [
-    {
-      "source": "/gh/:match*",
-      "destination": "https://cdn.jsdelivr.net/gh/:match*"
-    },
-    {
-
-      "source": "/combine/:match*",
-      "destination": "https://cdn.jsdelivr.net/combine/:match*"
-    },
-    {
-      "source": "/npm/:match*",
-      "destination": "https://unpkg.com/:match*"
-    },
-    {
-      "source": "/cdnjs/:match*",
-      "destination": "https://cdnjs.cloudflare.com/ajax/libs/:match*"
-    }
+  "version": 2,
+  "routes": [
+      {"src": "/(.*)","dest": "https://example.com/$1"}
   ]
 }
